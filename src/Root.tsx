@@ -1,6 +1,8 @@
 import "./index.css";
 import { Composition } from "remotion";
 import { MyComposition } from "./Composition";
+import { AiReel } from "./AiReel/AiReel";
+import { totalDurationInFrames } from "./AiReel/segments";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -12,6 +14,14 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1280}
         height={720}
+      />
+      <Composition
+        id="AiReel"
+        component={AiReel}
+        durationInFrames={totalDurationInFrames}
+        fps={30}
+        width={1080}
+        height={1920}
       />
     </>
   );
